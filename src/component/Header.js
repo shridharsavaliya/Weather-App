@@ -9,7 +9,7 @@ export default class Header extends Component {
                 <nav className="navbar navbar-expand-lg bg-dark">
                     <div className="container-fluid">
                         <img className="navbar-brand logo" src={logo} alt='weather logo'></img>
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div className="navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
                                     <Link className="nav-link active text-light" aria-current="page" to="/">Home</Link>
