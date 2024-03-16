@@ -12,10 +12,10 @@ export default class Header extends Component {
                         <div className="navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link active text-light" aria-current="page" to="/">Home</Link>
+                                    <Link className="nav-link active text-light" aria-current="page" to="/home">Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link text-light" to="/weather">Weather</Link>
+                                    <Link className="nav-link text-light" to="/">Weather</Link>
                                 </li>
                             </ul>
                         </div>

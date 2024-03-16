@@ -10,8 +10,8 @@ export default class App extends Component {
       <div>
         <Header/>
           <Routes>
-            <Route path='/' element={<Home></Home>}></Route>
-            <Route path='/weather' element={<Weather></Weather>}></Route>
+            <Route path='/' element={<Weather></Weather>}></Route>
+            <Route path='/home' element={<Home></Home>}></Route>
           </Routes>
       </div>
     )
