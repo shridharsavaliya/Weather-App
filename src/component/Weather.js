@@ -18,6 +18,22 @@ export default class Weather extends Component {
     }
   }
 
+  citySearchHandler = (e) =>{
+    e.preventDefault();
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&appid=3a4cc46f2a13413240e17078399add63`)
+    .then((res) => {
+      this.setState({
+        city: res.data.name,
+        weatherdata: res.data
+      },()=>{
+        this.addrecentHandler()
+      })
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }
+
   dataSearchHandler = (e) => {
     e.preventDefault();
     axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${this.state.lat}&lon=${this.state.lon}&appid=3a4cc46f2a13413240e17078399add63`)
@@ -114,7 +130,7 @@ export default class Weather extends Component {
     console.log(this.state.weatherdata);
     return (
       <div>
-        <Search change={this.dataChangeHandler} lat={this.state.lat} lon={this.state.lon} city={this.state.city} location={this.locationHandler} search={this.dataSearchHandler}/>
+        <Search change={this.dataChangeHandler} lat={this.state.lat} lon={this.state.lon} city={this.state.city} location={this.locationHandler} search={this.dataSearchHandler} citysearch={this.citySearchHandler}/>
         <Result loading={this.state.loading} weatherdata={this.state.weatherdata}/>
         <Recentdata recent={this.state.recent} research={this.dataResearchHandler}></Recentdata>
       </div>

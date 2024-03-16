@@ -18,7 +18,7 @@ export default class Search extends Component {
                     <form action="">
                         <label htmlFor="" className='fw-bold'>Enter City Name</label><br/>
                         <input type="text" className='my-3 w-100 p-1' name='city' placeholder='Enter City Name' onChange={this.props.change} value={this.props.city}/><br/>
-                        <input type="button" value="Search" className='btn btn-info mb-4'/><br/>
+                        <input type="button" value="Search" className='btn btn-info mb-4' onClick={this.props.citysearch}/><br/>
                         <h5 className='fw-bold d-inline'>Get co-ordinate</h5><button className='btn' onClick={this.props.location}><span className="material-symbols-outlined align-bottom">my_location</span></button><br/>
                         <label htmlFor="" className='mt-4'>Lat:</label><br/>
                         <input type="text" className='my-1 w-100 p-1' name='lat' placeholder='Enter latitude'  onChange={this.props.change} value={this.props.lat}/>
